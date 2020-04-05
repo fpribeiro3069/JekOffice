@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h1>JekOffice Login Page</h1>
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <!-- Sobreira!!! Procura saber como alterar o CSS destas tags geradas pelo Django.
+             De resto acho que já dá para fazer o CSS -->
+
+        {{ form.username.label }}
+        {{ form.username }}
+
+        {{ form.password.label}}
+        {{ form.password }}
+        {{ form.errors }}
+
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </body>
+</html>
