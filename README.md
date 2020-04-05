@@ -2,11 +2,11 @@
 Projeto Interno de gestão da jeKnowledge
 
 # Instalação
-git clone <url>
-cd <pasta_do_repositorio>
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-cd jekoffice
-python manage.py migrate
-python manage.py runserver
+1. git clone <url>
+2. cd <pasta_do_repositorio>
+3. python -m venv venv
+4. source venv/bin/activate
+5. pip install -r requirements.txt
+6. cd jekoffice
+7. python manage.py migrate
+8. python manage.py runserver
