@@ -2,16 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <title></title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   </head>
-  <body>
-    <div>
-      <h1>JekOffice Login Page</h1>
-      <form method="POST" action="{% url 'login' %}">
-        {% csrf_token %}
+  <body style="background-color:#1690C3;">
+    <div class="image">
+      <img  border="0" src="/static/css/logo_jek.png" alt="logo" >
+      <h1>JekOffice</h1>
+    </div>
 
-        <!-- Sobreira!!! Procura saber como alterar o CSS destas tags geradas pelo Django.
-             De resto acho que já dá para fazer o CSS -->
+
+    <div class="form">
+      <h2>Log In</h2>
+      <form class="site-form" method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
 
         {{ form.username.label }}
         {{ form.username }}
@@ -20,7 +26,7 @@
         {{ form.password }}
         {{ form.errors }}
 
-        <input type="submit" value="Login">
+        <input type="submit" value="SIGN IN">
       </form>
     </div>
   </body>
