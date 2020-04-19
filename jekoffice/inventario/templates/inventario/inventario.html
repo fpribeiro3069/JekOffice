@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Inventário</title>
+  </head>
+  <body>
+      {% if inventario_list %}
+        {% for item in inventario_list %}
+          <p>{{ item.nome }}: {{ item.quantidade }}</p>
+        {% endfor %}
+      {% else %}
+        <h1>Inventário encontra-se vazio.</h1>
+      {% endif %}
+  </body>
+</html>

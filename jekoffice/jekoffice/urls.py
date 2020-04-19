@@ -24,4 +24,5 @@ urlpatterns = [
     path('login/',  auth_views.LoginView.as_view(authentication_form=CustomAuthForm), name='login'),
     path('users/', include('users.urls')),
     path('admin/', admin.site.urls),
+    path('inventario/', include('inventario.urls')),
 ]
