@@ -2,15 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <title>Inventário</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
   </head>
-  <body>
-      {% if inventario_list %}
-        {% for item in inventario_list %}
-          <p>{{ item.nome }}: {{ item.quantidade }}</p>
-        {% endfor %}
-      {% else %}
-        <h1>Inventário encontra-se vazio.</h1>
-      {% endif %}
+  <body style="background-color:#1690C3;">
+
+      <div class="boxs">
+        <div id="box1">
+          <img class="image1" border="0" src="/static/css/profile1.png" alt="user" >
+          <img class="image2" border="0" src="/static/css/logo_jek.png" alt="logo" >
+        </div>
+        <div id="box2">
+          <img border="0" src="/static/css/lista.png" alt="logo" >
+        </div>
+        <div id="box3">
+          {% if inventario_list %}
+            {% for item in inventario_list %}
+              <p>{{ item.nome }}: {{ item.quantidade }}</p>
+            {% endfor %}
+          {% else %}
+            <h1>Inventário encontra-se vazio.</h1>
+          {% endif %}
+        </div>
+      </div>
+
+
   </body>
 </html>
