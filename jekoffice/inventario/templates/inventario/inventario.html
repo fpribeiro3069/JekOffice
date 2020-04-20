@@ -3,11 +3,38 @@
   <head>
     <meta charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <title>Inventário</title>
     {% load staticfiles %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <title>Inventário</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
   </head>
   <body style="background-color:#1690C3;">
+      <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".create-item").modalForm({
+                formURL: "{% url 'create_item' %}"
+            });
+
+            // Update Item
+            $(".update-item").each(function () {
+              $(this).modalForm({formURL: $(this).data('id')});
+            });
+
+        });
+      </script>
+
+
+      <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+          </div>
+        </div>
+      </div>
 
       <div class="boxs">
         <div id="box1">
@@ -21,10 +48,13 @@
           {% if inventario_list %}
             {% for item in inventario_list %}
               <p>{{ item.nome }}: {{ item.quantidade }}</p>
+              <button class="update-item btn btn-primary" type="button" name="button" data-id="{% url 'update_item' item.pk %}">Atualizar Item</button>
             {% endfor %}
           {% else %}
             <h1>Inventário encontra-se vazio.</h1>
           {% endif %}
+          <hr>
+          <button class="create-item btn btn-primary" type="button" name="button">Criar Item</button>
         </div>
       </div>
 

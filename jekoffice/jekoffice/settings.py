@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'phonenumber_field',
     'users.apps.UsersConfig',
     'inventario.apps.InventarioConfig',
     'jekoffice',
+    'phonenumber_field',
+    'bootstrap_modal_forms',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
