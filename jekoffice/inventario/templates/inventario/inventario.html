@@ -26,8 +26,6 @@
 
         });
       </script>
-
-
       <div class="modal fade" tabindex="-1" role="dialog" id="modal">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -38,22 +36,37 @@
 
       <div class="boxs">
         <div id="box1">
-          <img class="image1" border="0" src="/static/css/profile1.png" alt="user" >
+          <img class="image1" border="0" src="/static/css/profile.svg" alt="user" >
           <img class="image2" border="0" src="/static/css/logo_jek.png" alt="logo" >
         </div>
         <div id="box2">
-          <img border="0" src="/static/css/lista.png" alt="logo" >
+          <div id="press">
+            <img border="0" src="/static/css/lista_p.svg" alt="logo" >
+          </div>
+          <img class="image" border="0" src="/static/css/carteira.svg" alt="user" >
+          <img class="image" border="0" src="/static/css/bot.svg" alt="user" >
+          <img class="image" border="0" src="/static/css/document.svg" alt="user" >
         </div>
         <div id="box3">
+          <h2>Inventário da B3</h2>
+          <div class="inventory-title">
+            <span>Produto</span>
+            <span>Quantidade</span>
+          </div>
+          <div>
           {% if inventario_list %}
             {% for item in inventario_list %}
-              <p>{{ item.nome }}: {{ item.quantidade }}</p>
-              <button class="update-item btn btn-primary" type="button" name="button" data-id="{% url 'update_item' item.pk %}">Atualizar Item</button>
+            <div class="inventory-element">
+              <span>{{ item.nome }}</span>
+              <span>{{ item.quantidade }}</span>
+               <!--<button class="update-item btn btn-primary" type="button" name="button" data-id="{% url 'update_item' item.pk %}">Atualizar Item</button>-->
+            </div>
+            <hr>
             {% endfor %}
           {% else %}
             <h1>Inventário encontra-se vazio.</h1>
           {% endif %}
-          <hr>
+              </div>
           <button class="create-item btn btn-primary" type="button" name="button">Criar Item</button>
         </div>
       </div>

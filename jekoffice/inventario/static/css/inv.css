@@ -10,19 +10,17 @@ body {
 }
 
 .image1 {
-  display     : block;
-  width       : 10vh;
-  height      : 10vh;
-  margin      : auto;
-  padding-top : 3vh;
+  display    : block;
+  width      : 9vh;
+  height     : 9vh;
+  margin     : 5vh auto 0px;
 }
 
 .image2 {
-  display     : block;
-  width       : 14vh;
-  height      : 14vh;
-  margin      : auto;
-  padding-top : 70vh;
+  display    : block;
+  width      : 9vh;
+  height     : 9vh;
+  margin     : 72vh auto 0px;
 }
 
 #box1 {
@@ -38,19 +36,73 @@ body {
   background-color : #7CCCED;
 }
 
-#box2 img {
-  display     : block;
-  width       : 10vh;
-  height      : 10vh;
-  margin-left : 2vh;
-  padding-top : 30vh;
+#press {
+  z-index          : 1;
+  width            : 30%;
+  height           : 12vh;
+  margin-top       : 20vh;
+  border-radius    : 3vh 0px 0px 3vh;
+  background-color : #FFFFFF;
 }
+
+#press img {
+  display     : block;
+  position    : relative;
+  top         : 2vh;
+  width       : 8vh;
+  height      : 8vh;
+  margin-left : 3vh;
+}
+
+.image {
+  display     : block;
+  width       : 8vh;
+  height      : 8vh;
+  margin: 4vh 0px 0px 3vh;
+}
+
 
 #box3 {
   z-index          : 2;
-  position         : relative;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
   height           : 100vh;
-  margin-left      : 27vh;
+  margin-left      : 28vh;
   border-radius    : 10vh 0px 0px 10vh;
   background-color : #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#box3 h2{
+  margin      : 2rem 0vh;
+  color       : #1690C3;
+  text-align  : center;
+  font-size   : 2rem;
+  line-height : 2rem;
+}
+
+
+.inventory-element,.inventory-title{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0px auto;
+}
+.inventory-title{
+  margin-bottom: 2rem;
+  width: 65%;
+}
+
+.inventory-title span{
+  color:#7CCCED;
+  font-size:1.5rem;
+}
+
+#box3 hr{
+  background-color:#7CCCED;
+  width: 65%;
+  margin: 1rem auto;
 }
