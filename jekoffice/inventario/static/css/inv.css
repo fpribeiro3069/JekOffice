@@ -1,10 +1,12 @@
+button:focus {outline:0 !important;}
+
 html {
   margin : 0px;
 }
 
 body {
   margin      : 0px;
-  font-family : Roboto;
+  font-family: Suisse Int'l;
   font-style  : normal;
   font-weight : normal;
 }
@@ -75,13 +77,16 @@ body {
   flex-direction: column;
 }
 
-
-#box3 h2{
-  margin      : 2rem 0vh;
+#box3 h2 {
+  margin      : 2rem 0vh 3rem;
   color       : #1690C3;
   text-align  : center;
   font-size   : 2rem;
   line-height : 2rem;
+  margin-left: 10%;
+}
+.inventory-element{
+  color: rgba(0, 0, 0, 0.55);
 }
 
 
@@ -89,7 +94,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 60%;
-  margin: 0px auto;
+  margin: 0px 13%;
 }
 .inventory-title{
   margin-bottom: 2rem;
@@ -100,9 +105,16 @@ body {
   color:#7CCCED;
   font-size:1.5rem;
 }
-
+.criar{
+  background: no-repeat;
+  cursor:pointer;
+  border: none;
+  width: 1rem;
+  float: right;
+  margin-right:  30%;
+}
 #box3 hr{
   background-color:#7CCCED;
   width: 65%;
-  margin: 1rem auto;
+  margin: 1rem 13%;
 }
