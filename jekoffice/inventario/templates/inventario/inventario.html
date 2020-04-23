@@ -11,8 +11,8 @@
     <title>Inventário</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
   </head>
-  <body style="background-color:#1690C3;">
-      <script type="text/javascript">
+  <body>
+    <script type="text/javascript">
         $(document).ready(function() {
 
             $(".create-item").modalForm({
@@ -33,21 +33,23 @@
           </div>
         </div>
       </div>
-
-      <div class="boxs">
-        <div id="box1">
-          <img class="image1" border="0" src="/static/css/profile.svg" alt="user" >
-          <img class="image2" border="0" src="/static/css/logo_jek.png" alt="logo" >
+    <div class="darkblue">
+      <div class="darkblue-nav">
+        <img class="image1" border="0" src="/static/css/profile.svg" alt="user" >
+        <div>
+        <img class="image2" border="0" src="/static/css/logo_jek.png" alt="logo" >
         </div>
-        <div id="box2">
-          <div id="press">
-            <img border="0" src="/static/css/lista_p.svg" alt="logo" >
-          </div>
-          <img class="image" border="0" src="/static/css/carteira.svg" alt="user" >
-          <img class="image" border="0" src="/static/css/bot.svg" alt="user" >
-          <img class="image" border="0" src="/static/css/document.svg" alt="user" >
-        </div>
-        <div id="box3">
+      </div>
+      <div class="lightblue">
+          <nav>
+            <div id="press">
+              <img class="choosen" border="0" src="/static/css/lista_p.svg" alt="logo" >
+            </div>
+            <img class="image" border="0" src="/static/css/carteira.svg" alt="user" >
+            <img class="image" border="0" src="/static/css/bot.svg" alt="user" >
+            <img class="image" border="0" src="/static/css/document.svg" alt="user" >
+          </nav>
+        <div class="white">
           <h2>Inventário da B3
             <button class="create-item criar" type="button" name="button">
               <img border="0" src="/static/css/criar.svg" alt="user" >
@@ -69,11 +71,10 @@
           {% else %}
             <h1>Inventário encontra-se vazio.</h1>
           {% endif %}
-              </div>
-
+            </div>
+          </div>
         </div>
       </div>
-
-
   </body>
 </html>
+<style>

@@ -708,9 +708,9 @@ pre code {
 .col-lg-4,
 .col-lg-5,
 .col-lg-6,
+.col-lg,
 .col-lg-7,
 .col-lg-8,
-.col-lg,
 .col-lg-9,
 .col-lg-10,
 .col-lg-11,
@@ -734,7 +734,6 @@ pre code {
 .col-sm-1,
 .col-sm-2,
 .col-sm-3,
-.col-sm,
 .col-sm-4,
 .col-sm-5,
 .col-sm-6,
@@ -743,14 +742,15 @@ pre code {
 .col-sm-9,
 .col-sm-10,
 .col-sm-11,
+.col-sm,
 .col-sm-12,
 .col-sm-auto,
 .col-xl-1,
 .col-xl-2,
 .col-xl-3,
-.col-xl,
 .col-xl-4,
 .col-xl-5,
+.col-xl,
 .col-xl-6,
 .col-xl-7,
 .col-xl-8,
@@ -5740,7 +5740,6 @@ a.badge-dark:focus {
 .close {
   float       : right;
   color       : #000;
-  opacity     : .5;
   text-shadow : 0 1px 0 #fff;
   font-size   : 1.5rem;
   font-weight : 700;
@@ -5920,7 +5919,7 @@ a.close.disabled {
   display            : -ms-flexbox;
   position           : relative;
   width              : 100%;
-  border             : 1px solid rgba(0, 0, 0, 0.2);
+  margin             : 50% 5%;
   border-radius      : 0.3rem;
   background-color   : #fff;
   background-clip    : padding-box;
@@ -5952,7 +5951,6 @@ a.close.disabled {
   display                 : -ms-flexbox;
   display                 : flex;
   padding                 : 1rem 1rem;
-  border-bottom           : 1px solid #dee2e6;
   border-top-left-radius  : calc(0.3rem - 1px);
   border-top-right-radius : calc(0.3rem - 1px);
   align-items             : flex-start;
@@ -5962,7 +5960,7 @@ a.close.disabled {
 }
 
 .modal-header .close {
-  margin  : -1rem -1rem -1rem auto;
+  margin  : -1rem -1rem -1rem 0px;
   padding : 1rem 1rem;
 }
 
@@ -6455,8 +6453,8 @@ a.close.disabled {
 .carousel-control-next,
 .carousel-control-prev {
   z-index         : 1;
-  display         : -ms-flexbox;
   display         : flex;
+  display         : -ms-flexbox;
   position        : absolute;
   top             : 0;
   bottom          : 0;
@@ -6515,8 +6513,8 @@ a.close.disabled {
 
 .carousel-indicators {
   z-index         : 15;
-  display         : flex;
   display         : -ms-flexbox;
+  display         : flex;
   position        : absolute;
   right           : 0;
   bottom          : 0;

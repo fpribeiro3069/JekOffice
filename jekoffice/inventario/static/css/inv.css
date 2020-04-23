@@ -1,4 +1,6 @@
-button:focus {outline:0 !important;}
+button:focus {
+  outline : 0 !important;
+}
 
 html {
   margin : 0px;
@@ -6,115 +8,183 @@ html {
 
 body {
   margin      : 0px;
-  font-family: Suisse Int'l;
+  font-family : Suisse Int'l;
   font-style  : normal;
   font-weight : normal;
 }
 
-.image1 {
-  display    : block;
-  width      : 9vh;
-  height     : 9vh;
-  margin     : 5vh auto 0px;
+.darkblue {
+  display    : flex;
+  width      : 100vw;
+  height     : 100vh;
+  background : #1690C3;
 }
 
+.image1,
 .image2 {
-  display    : block;
-  width      : 9vh;
-  height     : 9vh;
-  margin     : 72vh auto 0px;
+  height     : 3rem;
+  object-fit : cover;
 }
 
-#box1 {
-  width : 7%;
-  float : left;
+.darkblue-nav,
+.lightblue nav {
+  display         : flex;
+  width           : 10%;
+  height          : calc(100% - 4rem);
+  padding         : 2rem 0rem;
+  align-items     : center;
+  flex-direction  : column;
+  justify-content : space-between;
 }
 
-#box2 {
-  width            : 30%;
-  height           : 100vh;
-  float            : left;
-  border-radius    : 10vh 0px 0px 10vh;
-  background-color : #7CCCED;
+.darkblue-nav div {
+  display        : flex;
+  align-items    : center;
+  flex-direction : column;
+}
+
+.lightblue img {
+  margin-top : 20%;
 }
 
 #press {
   z-index          : 1;
-  width            : 30%;
+  width            : 100%;
   height           : 12vh;
-  margin-top       : 20vh;
   border-radius    : 3vh 0px 0px 3vh;
   background-color : #FFFFFF;
 }
 
-#press img {
-  display     : block;
-  position    : relative;
-  top         : 2vh;
-  width       : 8vh;
-  height      : 8vh;
-  margin-left : 3vh;
+.choosen {
+  margin-left : 35%;
 }
 
-.image {
-  display     : block;
-  width       : 8vh;
-  height      : 8vh;
-  margin: 4vh 0px 0px 3vh;
+.white {
+  width         : 100%;
+  border-radius : 4rem 0rem 0rem 4rem;
+  box-shadow    : 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-
-#box3 {
-  z-index          : 2;
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  height           : 100vh;
-  margin-left      : 28vh;
-  border-radius    : 10vh 0px 0px 10vh;
-  background-color : #FFFFFF;
-  display: flex;
-  flex-direction: column;
+.lightblue {
+  display       : flex;
+  width         : 100%;
+  border-radius : 4rem 0rem 0rem 4rem;
+  background    : #7CCCED;
+  box-shadow    : 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-#box3 h2 {
-  margin      : 2rem 0vh 3rem;
+.lightblue nav {
+  justify-content : center;
+}
+
+.white {
+  padding    : 2rem;
+  background : white;
+}
+
+.white h2 {
+  margin      : 2rem 0% 3rem 31%;
   color       : #1690C3;
   text-align  : center;
   font-size   : 2rem;
   line-height : 2rem;
-  margin-left: 10%;
-}
-.inventory-element{
-  color: rgba(0, 0, 0, 0.55);
 }
 
-
-.inventory-element,.inventory-title{
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  margin: 0px 13%;
-}
-.inventory-title{
-  margin-bottom: 2rem;
-  width: 65%;
+.inventory-element {
+  color : rgba(0, 0, 0, 0.55);
 }
 
-.inventory-title span{
-  color:#7CCCED;
-  font-size:1.5rem;
+.inventory-element,
+.inventory-title {
+  display         : flex;
+  width           : 60%;
+  margin          : 0px 13%;
+  justify-content : space-between;
 }
-.criar{
-  background: no-repeat;
-  cursor:pointer;
-  border: none;
-  width: 1rem;
-  float: right;
-  margin-right:  30%;
+
+.inventory-title {
+  width         : 65%;
+  margin-bottom : 2rem;
 }
-#box3 hr{
-  background-color:#7CCCED;
-  width: 65%;
-  margin: 1rem 13%;
+
+.inventory-title span {
+  color     : #7CCCED;
+  font-size : 1.5rem;
+}
+
+.check {
+  width        : 1rem;
+  float        : right;
+  margin-right : 5%;
+  border       : none;
+  background   : no-repeat;
+  cursor       : pointer;
+}
+
+.criar {
+  width        : 1rem;
+  float        : right;
+  margin-right : 42%;
+  margin-left  : 20%;
+  border       : none;
+  background   : no-repeat;
+  cursor       : pointer;
+}
+
+.white hr {
+  width            : 65%;
+  margin           : 1rem 13%;
+  background-color : #7CCCED;
+}
+
+.modal-header {
+  border-radius    : 35vh 35vh 0 0;
+  background-color : #1690C3;
+}
+
+.modal-content {
+  width            : 100vh;
+  border-radius    : 7vh 7vh 10vh 10vh;
+  background-color : #1690C3;
+}
+
+.modal-header img {
+  width      : 1rem;
+  border     : none;
+  background : no-repeat;
+  cursor     : pointer;
+}
+
+.form-group1 {
+  height           : 20vh;
+  margin           : 0;
+  border-radius    : 7vh 7vh 7vh 7vh;
+  background-color : #7CCCED;
+}
+
+.form-group {
+  display       : inline-block;
+  margin        : 0;
+  margin        : 5vh 0vh 0vh 10vh;
+  border-radius : 40vh 40vh 35vh 35vh;
+}
+
+.form-group input {
+  display       : block;
+  box-sizing    : border-box;
+  width         : 35vh;
+  height        : 4vh;
+  margin-right  : auto;
+  margin-left   : auto;
+  padding       : 2vh;
+  border        : 0px solid rgba(255,255,255);
+  border-radius : 35vh;
+}
+
+.form-group label {
+  color : #FFFFFF;
+}
+
+.modal-title {
+  color : #FFFFFF;
 }
