@@ -86,7 +86,7 @@ body {
   color       : #1690C3;
   font-size   : 2rem;
   line-height : 2rem;
-  justify : center;
+  margin: auto;
 }
 
 .title{
