@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'inventario.apps.InventarioConfig',
+    'contactos.apps.ContactosConfig',
     'jekoffice',
     'phonenumber_field',
     'bootstrap_modal_forms',

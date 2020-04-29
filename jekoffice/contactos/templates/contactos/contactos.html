@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <title>Contactos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
+  </head>
+  <body>
+      <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+          </div>
+        </div>
+      </div>
+    <div class="darkblue">
+      <div class="darkblue-nav">
+        <img class="image1" border="0" src="/static/css/profile.svg" alt="user" >
+        <div>
+        <img class="image2" border="0" src="/static/css/logo_jek.png" alt="logo" >
+        </div>
+      </div>
+      <div class="lightblue">
+          <nav>
+            <div id="press">
+              <img class="choosen" border="0" src="/static/css/lista_p.svg" alt="logo" >
+            </div>
+            <img class="image" border="0" src="/static/css/carteira.svg" alt="user" >
+            <img class="image" border="0" src="/static/css/bot.svg" alt="user" >
+            <img class="image" border="0" src="/static/css/document.svg" alt="user" >
+          </nav>
+
+          {% if contactos_list %}
+            {% for contacto in contactos_list %}
+            <div class="inventory-element">
+              <span>{{ contacto.first_name}} {{contacto.last_name}}</span>
+              <span>{{ contacto.cargo }}</span>
+              <span>{{ contacto.curso }}</span>
+              <span>{{ contacto.email }}</span>
+              <span>{{ contacto.telemovel }}</span>
+              <span>{{ contacto.cc_num }}</span>
+            </div>
+            <hr>
+            {% endfor %}
+          {% else %}
+            <h1>Inventário encontra-se vazio.</h1>
+          {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+<style>
