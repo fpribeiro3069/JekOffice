@@ -1,0 +1,73 @@
+button:focus {
+  outline : 0 !important;
+}
+
+html {
+  margin : 0px;
+}
+
+body {
+  margin      : 0px;
+  font-family : Suisse Int'l;
+  font-style  : normal;
+  font-weight : normal;
+}
+
+
+
+.white h2 {
+  margin      : auto;
+  color       : #1690C3;
+  font-size   : 2rem;
+  line-height : 2rem;
+}
+
+.title {
+  display         : flex;
+  width           : 60%;
+  margin          : 2rem auto 3rem;
+  justify-content : space-between;
+}
+
+.inventory-element {
+  color : rgba(0, 0, 0, 0.55);
+}
+
+.inventory-element {
+  display         : flex;
+  width           : 70%;
+  margin          : 0px auto;
+  justify-content : space-between;
+}
+
+#inventory-title {
+  margin-bottom : 2rem;
+  color         : #7CCCED;
+  font-size     : 1.5rem;
+}
+
+.grid-titulo {
+  display               : inline-grid;
+  grid-column-gap       : 30%;
+  grid-template-columns : auto auto auto auto auto;
+}
+
+.grid-container {
+  display               : inline-grid;
+  margin                : 0px auto;
+  grid-column-gap       : 3rem;
+  grid-row-gap          : 2rem;
+  grid-template-columns : auto auto auto auto auto;
+}
+
+.grid-container hr{
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  margin           : 0rem auto;
+  background-color : #7CCCED;
+}
+
+.grid-item {
+  text-align : center;
+}

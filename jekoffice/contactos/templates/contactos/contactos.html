@@ -8,8 +8,9 @@
     <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
     <title>Contactos</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/carteira.css' %}">
   </head>
   <body>
       <div class="modal fade" tabindex="-1" role="dialog" id="modal">
@@ -21,36 +22,53 @@
       </div>
     <div class="darkblue">
       <div class="darkblue-nav">
-        <img class="image1" border="0" src="/static/css/profile.svg" alt="user" >
-        <div>
-        <img class="image2" border="0" src="/static/css/logo_jek.png" alt="logo" >
-        </div>
+        <img  border="0" src="/static/css/profile.svg" alt="user" >
+        <img border="0" src="/static/css/logo_jek.png" alt="logo" >
       </div>
       <div class="lightblue">
           <nav>
+              <img  border="0" src="/static/css/lista.svg" alt="logo" >
             <div id="press">
-              <img class="choosen" border="0" src="/static/css/lista_p.svg" alt="logo" >
+              <img  border="0" src="/static/css/carteira_p.svg" alt="user" >
             </div>
-            <img class="image" border="0" src="/static/css/carteira.svg" alt="user" >
-            <img class="image" border="0" src="/static/css/bot.svg" alt="user" >
-            <img class="image" border="0" src="/static/css/document.svg" alt="user" >
+            <img  border="0" src="/static/css/bot.svg" alt="user" >
+            <img  border="0" src="/static/css/document.svg" alt="user" >
           </nav>
-
-          {% if contactos_list %}
-            {% for contacto in contactos_list %}
-            <div class="inventory-element">
-              <span>{{ contacto.first_name}} {{contacto.last_name}}</span>
-              <span>{{ contacto.cargo }}</span>
-              <span>{{ contacto.curso }}</span>
-              <span>{{ contacto.email }}</span>
-              <span>{{ contacto.telemovel }}</span>
-              <span>{{ contacto.cc_num }}</span>
+          <div class="white">
+            <div class="title">
+              <h2>Carteira de Contactos</h2>
             </div>
-            <hr>
-            {% endfor %}
-          {% else %}
-            <h1>Inventário encontra-se vazio.</h1>
-          {% endif %}
+            <div>
+
+              <div class="inventory-element">
+                <div class="grid-container">
+                  <div class="grid-item"><span id="inventory-title">Nome</span></div>
+                  <div class="grid-item"><span id="inventory-title">Cargo</span></div>
+                  <div class="grid-item"><span id="inventory-title">Email</span></div>
+                  <div class="grid-item"><span id="inventory-title">Telemovel</span></div>
+                  <div class="grid-item"><span id="inventory-title">Cc</span></div>
+                  {% if contactos_list %}
+                  {% for contacto in contactos_list %}
+                  <div class="grid-item">{{ contacto.first_name}} {{contacto.last_name}}</div>
+                  <div class="grid-item">{{ contacto.cargo }}</div>
+                  <div class="grid-item">{{ contacto.email }}</div>
+                  <div class="grid-item">{{ contacto.telemovel }}</div>
+                  <div class="grid-item">{{ contacto.cc_num }}</div>
+                  <hr>
+                  {% endfor %}
+                </div>
+              </div>
+
+            {% else %}
+              <h1>Inventário encontra-se vazio.</h1>
+            {% endif %}
+            </div>
+            </div>
+
+
+
+
+
             </div>
           </div>
         </div>
