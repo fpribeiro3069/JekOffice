@@ -1,52 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    {% load staticfiles %}
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js' %}"></script>
-    <script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
-    <title>Contactos</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/carteira.css' %}">
-  </head>
-  <body>
-      <div class="modal fade" tabindex="-1" role="dialog" id="modal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-
-          </div>
-        </div>
-      </div>
-    <div class="darkblue">
-      <div class="darkblue-nav">
-        <img  border="0" src="/static/css/profile.svg" alt="user" >
-        <img border="0" src="/static/css/logo_jek.png" alt="logo" >
-      </div>
-      <div class="lightblue">
-          <nav>
-              <img  border="0" src="/static/css/lista.svg" alt="logo" >
-            <div id="press">
-              <img  border="0" src="/static/css/carteira_p.svg" alt="user" >
-            </div>
-            <img  border="0" src="/static/css/bot.svg" alt="user" >
-            <img  border="0" src="/static/css/document.svg" alt="user" >
-          </nav>
-          <div class="white">
+{% extends 'base.html' %}
+{% block css %}
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/carteira.css' %}">
+{% endblock %}
+{% block content %}
             <div class="title">
               <h2>Carteira de Contactos</h2>
             </div>
             <div>
-
-              <div class="inventory-element">
+              <div class="contact-element">
                 <div class="grid-container">
-                  <div class="grid-item"><span id="inventory-title">Nome</span></div>
-                  <div class="grid-item"><span id="inventory-title">Cargo</span></div>
-                  <div class="grid-item"><span id="inventory-title">Email</span></div>
-                  <div class="grid-item"><span id="inventory-title">Telemovel</span></div>
-                  <div class="grid-item"><span id="inventory-title">Cc</span></div>
+                  <div class="grid-item"><span id="contact-title">Nome</span></div>
+                  <div class="grid-item"><span id="contact-title">Cargo</span></div>
+                  <div class="grid-item"><span id="contact-title">Email</span></div>
+                  <div class="grid-item"><span id="contact-title">Telemovel</span></div>
+                  <div class="grid-item"><span id="contact-title">Cc</span></div>
                   {% if contactos_list %}
                   {% for contacto in contactos_list %}
                   <div class="grid-item">{{ contacto.first_name}} {{contacto.last_name}}</div>
@@ -58,21 +26,8 @@
                   {% endfor %}
                 </div>
               </div>
-
             {% else %}
               <h1>Inventário encontra-se vazio.</h1>
             {% endif %}
             </div>
-            </div>
-
-
-
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-  </body>
-</html>
-<style>
+    {% endblock %}

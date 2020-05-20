@@ -1,51 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    {% load staticfiles %}
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js' %}"></script>
-    <script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
-    <title>Inventário</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
-  </head>
-  <body>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(".create-item").modalForm({
-          formURL: "{% url 'create_item' %}"
-        });
-        // Update Item
-        $(".update-item").each(function () {
-          $(this).modalForm({formURL: $(this).data('id')});
-        });
-      });
-    </script>
-    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <!-- Div usado pelos popups-->
-        </div>
-      </div>
-    </div>
-    <div class="darkblue">
-      <div class="darkblue-nav">
-        <img border="0" src="/static/css/profile.svg" alt="user" >
-        <img border="0" src="/static/css/logo_jek.png" alt="logo" >
-      </div>
-      <div class="lightblue">
-        <nav>
-          <div id="press">
-            <img  border="0" src="/static/css/lista_p.svg" alt="logo" >
-          </div>
-          <img  border="0" src="/static/css/carteira.svg" alt="user" >
-          <img  border="0" src="/static/css/bot.svg" alt="user" >
-          <img  border="0" src="/static/css/document.svg" alt="user" >
-        </nav>
-        <div class="white">
+
+{% extends 'base.html' %}
+{% block css %}
+  {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
+{% endblock %}
+{% block content %}
+
           <div class="title">
             <h2>Inventário da B3</h2>
             <button class="create-item criar" type="button" name="button">
@@ -93,8 +53,4 @@
             <h1>Inventário encontra-se vazio.</h1>
             {% endif %}
           </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+{% endblock %}
