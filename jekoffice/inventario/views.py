@@ -23,6 +23,7 @@ class Inventario(View):
         base_url = '/inventario/?'
 
         context = {
+            'name': 'inventario',
             'inventario_list': inventario_list,
             'paginator': paginator,
             'base_url': base_url,

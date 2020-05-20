@@ -24,6 +24,7 @@ class Contactos(View):
             'cc_num',
         )
         context = {
+            'name': 'contactos',
             'contactos_list': contactos_list,
         }
         return render(request, 'contactos/contactos.html', context);
