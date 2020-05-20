@@ -33,7 +33,7 @@ class Inventario(View):
     def do_paginate(self, item_list, page_number):
         ret_data_list = item_list
 
-        # em cada página apenas mostrar 10 items
+        # Tem que ser dinâmico de acordo com a página
         results_per_page = 10
 
         paginator = Paginator(item_list, results_per_page)
