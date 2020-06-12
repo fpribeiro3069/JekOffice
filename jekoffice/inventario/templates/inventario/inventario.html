@@ -1,0 +1,56 @@
+
+{% extends 'base.html' %}
+{% block css %}
+  {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
+{% endblock %}
+{% block content %}
+
+          <div class="title">
+            <h2>Inventário da B3</h2>
+            <button class="create-item criar" type="button" name="button">
+              <img border="0" src="/static/css/criar.svg" alt="user" >
+            </button>
+          </div>
+
+          <div class="inventory-title">
+            <span>Produto</span>
+            <span>Quantidade</span>
+          </div>
+          <div>
+            {% if inventario_list %}
+              {% for item in inventario_list %}
+                <div class="inventory-element">
+                  <span>{{ item.nome }}</span>
+                  <span>{{ item.quantidade }}</span>
+                  <!--<button class="update-item btn btn-primary" type="button" name="button" data-id="{% url 'update_item' item.pk %}">Atualizar Item</button>-->
+                </div>
+                <hr>
+              {% endfor %}
+              <div class="pagination">
+                <!-- previous page link -->
+                {% if inventario_list.has_previous %}
+                  <a href="{{ base_url }}page={{ inventario_list.previous_page_number }}">Prev </a></li>
+                {% else %}
+                  <span class="disabled">Prev </span>
+                {% endif %}
+                <!-- page number link-->
+                {% for i in paginator.page_range %}
+                  {% if inventario_list.number == i %}
+                    <span class="active">{{ i }} <span class="sr-only">(current)</span></span>
+                  {% else %}
+                    <a href="{{ base_url }}page={{ i }}">{{ i }} </a></li>
+                  {% endif %}
+                {% endfor %}
+                <!-- next page link -->
+                {% if inventario_list.has_next %}
+                  <a href="{{ base_url }}page={{ inventario_list.next_page_number }}"> Next</a>
+                {% else %}
+                  <span class="disabled"> Next</span>
+                {% endif %}
+              </div>
+            {% else %}
+            <h1>Inventário encontra-se vazio.</h1>
+            {% endif %}
+          </div>
+{% endblock %}

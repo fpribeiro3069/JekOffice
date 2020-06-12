@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
+    {% block css %}
+    {% endblock  %}
+  </head>
+  <body>
+      <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          </div>
+        </div>
+      </div>
+    <div class="darkblue">
+      <div class="darkblue-nav">
+        <img  border="0" src="/static/css/profile.svg" alt="user" >
+        <img border="0" src="/static/css/logo_jek.png" alt="logo" >
+      </div>
+      <div class="lightblue">
+          <nav>
+            {% if name == "inventario" %}
+            <div id="press">
+              <img  border="0" src="/static/css/lista_p.svg" alt="logo" >
+            </div>
+            {% else %}
+            <a href="{% url 'inventario' %}"><img  border="0" src="/static/css/lista.svg" alt="logo" ></a>
+            {% endif %}
+            {% if name == "contactos" %}
+            <div id="press">
+              <img  border="0" src="/static/css/carteira_p.svg" alt="user" >
+            </div>
+            {% else %}
+            <a href="{% url 'contactos' %}"><img  border="0" src="/static/css/carteira.svg" alt="logo" ></a>
+            {% endif %}
+            {% if name == "bot" %}
+            <div id="press">
+              <img  border="0" src="/static/css/bot_p.svg" alt="user" >
+            </div>
+            {% else %}
+            <img  border="0" src="/static/css/bot.svg" alt="logo" >
+            {% endif %}
+            {% if name == "documents" %}
+            <div id="press">
+              <img  border="0" src="/static/css/document_p.svg" alt="user" >
+            </div>
+            {% else %}
+            <img  border="0" src="/static/css/document.svg" alt="logo" >
+            {% endif %}
+          </nav>
+          <div class="white">
+            {% block content %}
+            {% endblock %}
+            </div>
+          </div>
+        </div>
+  </body>
+</html>
+<style>

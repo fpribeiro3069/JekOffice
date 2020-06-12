@@ -1,0 +1,71 @@
+body {
+  font-family : Roboto;
+  font-style  : normal;
+  font-weight : normal;
+}
+
+.image img {
+  display      : block;
+  width        : 18vh;
+  height       : 18vh;
+  margin-right : auto;
+  margin-left  : auto;
+  padding-top  : 7vh;
+}
+
+.image h1 {
+  margin      : 0vh;
+  color       : #FFFFFF;
+  text-align  : center;
+  font-size   : 10vh;
+  line-height : 10vh;
+}
+
+.form {
+  display       : block;
+  width         : 52vh;
+  height        : 40vh;
+  margin-top    : 7vh;
+  margin-right  : auto;
+  margin-left   : auto;
+  border-radius : 43px;
+  background    : #FFFFFF;
+}
+
+.form h2 {
+  padding-top : 3vh;
+  color       : #1690C3;
+  text-align  : center;
+}
+
+.site-form {
+  margin-top : 5%;
+}
+
+.site-form input {
+  display       : block;
+  box-sizing    : border-box;
+  width         : 35vh;
+  height        : 4vh;
+  margin-top    : 5vh;
+  margin-right  : auto;
+  margin-left   : auto;
+  padding       : 2vh;
+  border        : 1px solid rgba(0, 0, 0, 0.35);
+  border-radius : 35vh;
+
+}
+
+.site-form input[type="submit"] {
+  display       : block;
+  box-sizing    : border-box;
+  width         : 50%;
+  height        : 5vh;
+  color         : #FFFFFF;
+  border        : 1px solid #1690C3;
+  border-radius : 50px;
+  background    : #1690C3;
+  text-align    : center;
+  font-size     : 2vh;
+  line-height   : 2vh;
+}

@@ -1,0 +1,116 @@
+
+.white {
+  padding    : 2rem;
+  background : white;
+}
+
+.white h2 {
+  margin      : auto;
+  color       : #1690C3;
+  font-size   : 2rem;
+  line-height : 2rem;
+}
+
+.title {
+  display         : flex;
+  width           : 60%;
+  margin          : 2rem auto 3rem;
+  justify-content : space-between;
+}
+
+.inventory-element {
+  color : rgba(0, 0, 0, 0.55);
+}
+
+.inventory-element,
+.inventory-title {
+  display         : flex;
+  width           : 60%;
+  margin          : 0px auto;
+  justify-content : space-between;
+}
+
+.inventory-title {
+  width         : 65%;
+  margin-bottom : 2rem;
+}
+
+.inventory-title span {
+  color     : #7CCCED;
+  font-size : 1.5rem;
+}
+
+.check {
+  width        : 1rem;
+  float        : right;
+  margin-right : 5%;
+  border       : none;
+  background   : no-repeat;
+  cursor       : pointer;
+}
+
+.criar {
+  width      : 1rem;
+  float      : right;
+  border     : none;
+  background : no-repeat;
+  cursor     : pointer;
+}
+
+.white hr {
+  width            : 65%;
+  margin           : 1rem auto;
+  background-color : #7CCCED;
+}
+
+.modal-header {
+  border-radius    : 35vh 35vh 0 0;
+  background-color : #1690C3;
+}
+
+.modal-content {
+  width            : 100vh;
+  border-radius    : 7vh 7vh 10vh 10vh;
+  background-color : #1690C3;
+}
+
+.modal-header img {
+  width      : 1rem;
+  border     : none;
+  background : no-repeat;
+  cursor     : pointer;
+}
+
+.form-group1 {
+  height           : 20vh;
+  margin           : 0;
+  border-radius    : 7vh 7vh 7vh 7vh;
+  background-color : #7CCCED;
+}
+
+.form-group {
+  display       : inline-block;
+  margin        : 0;
+  margin        : 5vh 0vh 0vh 10vh;
+  border-radius : 40vh 40vh 35vh 35vh;
+}
+
+.form-group input {
+  display       : block;
+  box-sizing    : border-box;
+  width         : 35vh;
+  height        : 4vh;
+  margin-right  : auto;
+  margin-left   : auto;
+  padding       : 2vh;
+  border        : 0px solid rgba(255,255,255);
+  border-radius : 35vh;
+}
+
+.form-group label {
+  color : #FFFFFF;
+}
+
+.modal-title {
+  color : #FFFFFF;
+}

@@ -5,27 +5,32 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <title></title>
     {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <script src="{% static 'js/sweetalert2.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sweetalert2.css' %}">
   </head>
-  <body style="background-color:#1690C3;">
+  <body onload="error();" style="background-color:#1690C3;">
     <div class="image">
-      <img  border="0" src="/static/css/logo_jek.png" alt="logo" >
-      <h1>JekOffice</h1>
+      <img border="0" src="/static/css/logo_jek.png" alt="logo" >
+      <h1>jeKOffice</h1>
     </div>
-
-
     <div class="form">
-      <h2>Log In</h2>
+      <h2>Login</h2>
       <form class="site-form" method="POST" action="{% url 'login' %}">
         {% csrf_token %}
-
-        {{ form.username.label }}
         {{ form.username }}
-
-        {{ form.password.label}}
         {{ form.password }}
-        {{ form.errors }}
-
+        <script type="text/javascript">
+          function error() {
+            if('{{ form.errors}}' != ''){
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+              })
+            }
+          }
+        </script>
         <input type="submit" value="SIGN IN">
       </form>
     </div>
