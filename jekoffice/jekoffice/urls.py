@@ -21,7 +21,7 @@ from django.contrib.auth import views as auth_views
 from .forms import CustomAuthForm
 
 urlpatterns = [
-    path('', RedirectView.as_view(pattern_name='login', permanent=False)),
+    path('', RedirectView.as_view(pattern_name='inventario', permanent=False)),
     path('login/',  auth_views.LoginView.as_view(authentication_form=CustomAuthForm), name='login'),
     path('users/', include('users.urls')),
     path('admin/', admin.site.urls),
