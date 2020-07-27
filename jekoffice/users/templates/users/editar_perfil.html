@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block css %}
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/inv.css' %}">
+
+{% endblock %}
+{% block content %}
+
+<form action="{% url 'editar_perfil' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

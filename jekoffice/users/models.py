@@ -36,7 +36,7 @@ class CustomUser(AbstractUser):
     curso           = models.CharField(max_length = 100,null = True, blank = True)
     telemovel       = PhoneNumberField(null=True, blank=True, unique=True, region='PT')
     cc_num          = models.IntegerField(null=True,blank=True)
-    mac_adress      = models.CharField( max_length = 5,null = True, blank = True)
+    mac_adress      = models.CharField( max_length = 20,null = True, blank = True)
     imagem          = models.FileField(upload_to='users/%Y/%m/%d/', null = True, blank = True)
     is_super   = models.BooleanField(default = False)
 
