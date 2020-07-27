@@ -14,6 +14,16 @@
     {% endblock  %}
   </head>
   <body>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".create-item").modalForm({
+                formURL: "{% url 'create_item' %}"
+            });
+        });
+    </script>
+
       <div class="modal fade" tabindex="-1" role="dialog" id="modal">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
