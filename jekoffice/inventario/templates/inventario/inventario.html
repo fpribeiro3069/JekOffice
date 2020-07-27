@@ -32,7 +32,7 @@
               <div class="pagination">
                 <!-- previous page link -->
                 {% if inventario_list.has_previous %}
-                  <a href="{{ base_url }}page={{ inventario_list.previous_page_number }}">Prev </a></li>
+                  <a href="{{ base_url }}page={{ inventario_list.previous_page_number }}">Prev </a>
                 {% else %}
                   <span class="disabled">Prev </span>
                 {% endif %}
@@ -41,7 +41,7 @@
                   {% if inventario_list.number == i %}
                     <span class="active">{{ i }} <span class="sr-only">(current)</span></span>
                   {% else %}
-                    <a href="{{ base_url }}page={{ i }}">{{ i }} </a></li>
+                    <a href="{{ base_url }}page={{ i }}">{{ i }} </a>
                   {% endif %}
                 {% endfor %}
                 <!-- next page link -->
