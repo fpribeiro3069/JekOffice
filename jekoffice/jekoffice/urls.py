@@ -20,6 +20,9 @@ from . import views
 from django.contrib.auth import views as auth_views
 from .forms import CustomAuthForm
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('', RedirectView.as_view(pattern_name='inventario', permanent=False)),
     path('login/',  auth_views.LoginView.as_view(authentication_form=CustomAuthForm), name='login'),
@@ -27,4 +30,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('inventario/', include('inventario.urls')),
     path('contactos/', include('contactos.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

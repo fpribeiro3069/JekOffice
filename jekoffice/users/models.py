@@ -37,7 +37,7 @@ class CustomUser(AbstractUser):
     telemovel       = PhoneNumberField(null=True, blank=True, unique=True, region='PT')
     cc_num          = models.IntegerField(null=True,blank=True)
     mac_adress      = models.CharField( max_length = 20,null = True, blank = True)
-    imagem          = models.FileField(upload_to='users/%Y/%m/%d/', null = True, blank = True)
+    imagem          = models.ImageField(upload_to='users/%Y/%m/%d/', null = True, blank = True)
     is_super   = models.BooleanField(default = False)
 
     def __str__(self):
