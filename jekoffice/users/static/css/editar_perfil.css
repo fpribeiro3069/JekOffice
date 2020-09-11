@@ -23,10 +23,136 @@ body {
   margin          : 2rem auto 3rem;
   position: relative;
 }
+.imagem{
+  grid-area: imagem;
+
+}
+
+.grid-item1{
+  grid-area: item1;
+}
+.grid-item2{
+  grid-area: item2;
+}
+.grid-item3{
+  grid-area: item3;
+}
+.grid-item4{
+  grid-area: item4;
+}
+.grid-item5{
+  grid-area: item5;
+}
+.grid-item6{
+  grid-area: item6;
+}
+
+.grid-item7{
+  grid-area: item7;
+}
 
 .box{
+margin:auto;
+width: 80%;
+height: 80%;
+border: 2px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 20px;
+
+}
+.form{
+  margin: 4vh auto;
+  display: grid;
+  grid-template-areas:
+  'imagem item1 item2'
+  'imagem item3 item4'
+  'imagem item5 item6'
+  'imagem item7 item7';
+  grid-gap: 10px;
+}
+
+label{
+  font-family: Suisse Int'l;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+
+}
+
+input[type="text"] {
   border: 2px solid #FFFFFF;
 box-sizing: border-box;
 border-radius: 20px;
-word-break: break-all;
+background-color: #1690C3;
+font-family: Suisse Int'l;
+font-style: normal;
+
+
+color: #FFFFFF;
+
+
+}
+input[type="Email"] {
+  border: 2px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 20px;
+background-color: #1690C3;
+font-family: Suisse Int'l;
+font-style: normal;
+
+
+color: #FFFFFF;
+
+}
+
+input[type="tel"] {
+  border: 2px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 20px;
+background-color: #1690C3;
+font-family: Suisse Int'l;
+font-style: normal;
+
+
+color: #FFFFFF;
+}
+input[type="number"] {
+  border: 2px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 20px;
+background-color: #1690C3;
+font-family: Suisse Int'l;
+font-style: normal;
+
+
+color: #FFFFFF;
+}
+
+select{
+  border: 2px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 20px;
+background-color: #1690C3;
+font-family: Suisse Int'l;
+font-style: normal;
+
+
+color: #FFFFFF;
+}
+input[type="submit"]{
+  display       : block;
+  box-sizing    : border-box;
+  margin: -1.5vh auto ;
+  width         : 20%;
+  height        : 3vh;
+  color         : #1690C3;
+  border        : 1px solid #1690C3;
+  border-radius : 50px;
+  background    : #FFFFFF;
+  text-align    : center;
+  font-size     : 2vh;
+  line-height   : 2vh;
 }
