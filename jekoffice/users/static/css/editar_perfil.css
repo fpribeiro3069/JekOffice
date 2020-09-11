@@ -1,0 +1,32 @@
+button:focus {
+  outline : 0 !important;
+}
+
+html {
+  margin : 0px;
+}
+
+body {
+  margin      : 0px;
+  font-family : Roboto;
+  font-style  : normal;
+  font-weight : normal;
+  background: #1690C3;
+}
+
+.title{
+  text-align: center;
+}
+.title h2{
+  color       : #FFFFFF;
+  display         : inline-block;
+  margin          : 2rem auto 3rem;
+  position: relative;
+}
+
+.box{
+  border: 2px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 20px;
+word-break: break-all;
+}
