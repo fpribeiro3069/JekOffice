@@ -143,6 +143,7 @@ font-style: normal;
 color: #FFFFFF;
 }
 input[type="submit"]{
+
   display       : block;
   box-sizing    : border-box;
   margin: -1.5vh auto ;
@@ -155,4 +156,11 @@ input[type="submit"]{
   text-align    : center;
   font-size     : 2vh;
   line-height   : 2vh;
+}
+
+img{
+  width: 30%;
+  height: 30%;
+  
+
 }

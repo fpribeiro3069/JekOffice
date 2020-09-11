@@ -13,9 +13,13 @@
     </div>
 
     <div class="box">
-      <form class="form" action="{% url 'editar_perfil'%}"method="post">
+      <form class="form" action="{% url 'editar_perfil'%}"method="post" enctype='multipart/form-data'>
           {% csrf_token %}
-          <div class="imagem">{{ form.imagem.label_tag}} <br> {{ form.imagem}} </div>
+          {% if user.imagem %}
+          <div class="imagem"><img src="{{user.imagem.url}}" alt=""> <br> {{ form.imagem}} </div>
+          {% else %}
+          <div class="imagem"><img src="/static/css/profile1.png" alt=""> <br> {{ form.imagem}} </div>
+          {% endif %}
           <div class="grid-item1">{{ form.first_name.label_tag}}<br> {{ form.first_name}}</div>
           <div class="grid-item2"> {{ form.last_name.label_tag}}<br> {{ form.last_name}}</div>
           <div class="grid-item3">{{ form.cargo.label_tag}}<br> {{ form.cargo}}</div>
@@ -23,8 +27,9 @@
           <div class="grid-item5">{{ form.telemovel.label_tag}}<br> {{ form.telemovel}}</div>
           <div class="grid-item6">{{ form.cc_num.label_tag}}<br> {{ form.cc_num}}</div>
           <div class="grid-item7">{{ form.mac_adress.label_tag}}<br> {{ form.mac_adress}}</div>
+          <input type="submit" value="Salvar Alterções">
       </form>
     </div>
-    <input type="submit" value="Salvar Alterções">
+
 </body>
 </html>
