@@ -20,7 +20,7 @@ class EditarPerfil(View):
         context = {
             'form': form,
             #'image_url': settings.MEDIA_URL + current_user.imagem.url,
-            'user': current_user,
+            #'user': current_user,
         }
         return render(request, 'users/editar_perfil.html', context)
 
@@ -30,5 +30,5 @@ class EditarPerfil(View):
         form = CustomUserForm(request.POST, request.FILES, instance=current_user)
         if form.is_valid():
             form.save()
-            return redirect('editar_perfil')
+            #return redirect('editar_perfil')
         return redirect('inventario')
