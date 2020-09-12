@@ -1,6 +1,5 @@
 
 .white {
-  padding    : 2rem;
   background : white;
 }
 
@@ -113,4 +112,14 @@
 
 .modal-title {
   color : #FFFFFF;
+}
+
+.back img{
+  margin-top: 7vh;
+  margin-left: 15vh;
+}
+
+.foward img{
+  margin-top: 7vh;
+  margin-left: 73vw;
 }
