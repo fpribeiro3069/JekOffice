@@ -32,7 +32,11 @@
       </div>
     <div class="darkblue">
       <div class="darkblue-nav">
-        <a href="{% url 'editar_perfil' %}"><img  border="0" src="{{ user.imagem.url }}" alt="logo" ></a>
+        {% if user.imagem %}
+        <a href="{% url 'editar_perfil' %}"><div class="imagem"><img src="{{user.imagem.url}}" alt=""> <br> {{ form.imagem}} </div></a>
+        {% else %}
+        <a href="{% url 'editar_perfil' %}"><div class="imagem"><img src="/static/css/profile1.png" alt=""> <br> {{ form.imagem}} </div></a>
+        {% endif %}
         <img border="0" src="/static/css/logo_jek.png" alt="logo" >
       </div>
       <div class="lightblue">
