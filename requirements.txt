@@ -4,7 +4,7 @@ Django==2.2.10
 django-bootstrap-modal-forms==1.5.0
 django-phonenumber-field==3.0.1
 django-pwa==1.0.5
-lxml==4.3.4
+lxml==4.6.2
 phonenumbers==8.12.1
 phonenumberslite==8.10.14
 Pillow==6.0.0
